@@ -1,0 +1,98 @@
+---
+layout: post
+title: 排序整理
+date: 2015-06-22 
+categories: 算法
+excerpt: 排序
+---
+
+## 排序整理
+
+	void swap(int &i, int &j) 
+	{
+		int temp = i;
+		i = j;
+		j = temp; 
+	}    
+-  冒泡排序   
+```
+	void BubbleSort(int a[], int n) 
+	{
+		for(int i = 0; i < n; i++)  
+			for (int j = 1; j < n - i; ++j)  
+			{
+				if(a[j-1] > a[j]) 
+				{	
+               		swap(a[j-1],a[j]);
+				}
+			}
+	}
+```
+
+-  选择排序   
+```	
+	void SelectSort(int a[], int n) 
+	{
+		int i,j,min;
+		int temp;
+		for (i = 0; i < n; ++i)
+		{
+			min = i;
+			for (j = i+1; j < n; ++j)
+			{
+				if (a[min] > a[j])
+					min = j;
+			}
+        	swap(a[i],a[min]);
+		}
+	}
+```
+-  插入排序   
+```	
+	void InsertSort(int a[], int n)
+	{
+		int i,j;
+		for (int i = 0; i < n; ++i)
+		{
+			for (int j = i; j > 0 && (a[j] < a[j-1]) ; --j)
+				swap(a[j],a[j-1]);
+		}
+	}
+```
+-  希尔排序   
+```
+	void ShellSort(int a[], int n) 
+	{
+		int h = 1;
+		int i,j;
+		while(h < n/3)
+			h = 3*h + 1;
+		while(h >= 1) 
+		{
+			for (i = h; i < n; ++i)
+			{
+				for (j = i; j >= h && (a[j] < a[j-h]); j -= h)
+                	swap(a[j],a[j-h]);
+			}
+			h = h/3;
+		}
+	}
+```
+- 快速排序（简单版本）  	
+```   		
+	void QuickSort(int v[], int left, int right) 
+	{
+		int i, last;
+		if (left >= right)
+			return;
+		swap(v[left], v[(left+right)/2]);
+    	last = left;
+    	for (i = 0; i < right; ++i)
+    		if (v[i] < v[left])
+    			swap(++last, i);
+    	swap(left,last);
+    	QuickSort(v,left,last-1);
+    	QuickSort(v,last+1,right);
+	}
+```
+未完。。。
