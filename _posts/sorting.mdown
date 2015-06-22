@@ -6,6 +6,9 @@ categories: 算法
 excerpt: 排序
 ---
 
+* content
+{:toc}
+
 ## 排序整理
 
 	void swap(int &i, int &j) 
