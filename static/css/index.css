@@ -18,7 +18,12 @@ pre code{
 	font-size: 14px;
 }
 
+<<<<<<< HEAD
 code {
+=======
+code{
+	white-space: pre;
+>>>>>>> e81850a135b5d8ba37ff200b7b30efc8b7376eb9
 }
 
 table{
