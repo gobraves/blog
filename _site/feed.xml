@@ -5,8 +5,8 @@
     <description>To be my hero</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 11 Jul 2015 20:16:47 +0800</pubDate>
-    <lastBuildDate>Sat, 11 Jul 2015 20:16:47 +0800</lastBuildDate>
+    <pubDate>Sat, 11 Jul 2015 23:00:48 +0800</pubDate>
+    <lastBuildDate>Sat, 11 Jul 2015 23:00:48 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -29,43 +29,53 @@
 &lt;ol&gt;
   &lt;li&gt;文件系统中的对象可以用一条路径作为惟一的识别&lt;/li&gt;
   &lt;li&gt;路径分为绝对路径和相对路径&lt;/li&gt;
-  &lt;li&gt;文件或者目录一般用java.io.File对象表示，java7中，用java.nio.file.Path接口代替它 &lt;br /&gt;
-&amp;gt; FileSystem类 :
-  &amp;gt;  - &lt;code&gt;FileSystems.getDefault()&lt;/code&gt;获取当前的文件系统 &lt;br /&gt;
-  &amp;gt;  - &lt;code&gt;getSeparator()&lt;/code&gt;获取当前系统的分隔符 &lt;br /&gt;
-  &amp;gt;  - &lt;code&gt;getRootDirectories()&lt;/code&gt;返回一个Iterable,遍历根目录&lt;/li&gt;
-  &lt;li&gt;创建path
-    &lt;ol&gt;
-      &lt;li&gt;&lt;code&gt;FileSystems.getPath(...)&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;Path path = Paths.get(...)&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;getNameCount()&lt;/code&gt;,&lt;code&gt;getName(int index)&lt;/code&gt;从0开始&lt;/li&gt;
-      &lt;li&gt;path其他方法&lt;code&gt;getFileName()&lt;/code&gt;,&lt;code&gt;getParent()&lt;/code&gt;,&lt;code&gt;getRoot()&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
+  &lt;li&gt;文件或者目录一般用java.io.File对象表示，java7中，用java.nio.file.Path接口代替它&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;FileSystem类 :&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;code&gt;FileSystems.getDefault()&lt;/code&gt;获取当前的文件系统&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;getSeparator()&lt;/code&gt;获取当前系统的分隔符&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;getRootDirectories()&lt;/code&gt;返回一个Iterable,遍历根目录
+      &lt;ol&gt;
+        &lt;li&gt;创建path&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;FileSystems.getPath(...)&lt;/code&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;Path path = Paths.get(...)&lt;/code&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;code&gt;getNameCount()&lt;/code&gt;,&lt;code&gt;getName(int index)&lt;/code&gt;从0开始&lt;/li&gt;
+        &lt;li&gt;path其他方法&lt;code&gt;getFileName()&lt;/code&gt;,&lt;code&gt;getParent()&lt;/code&gt;,&lt;code&gt;getRoot()&lt;/code&gt;&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
 
 &lt;h4 id=&quot;section-2&quot;&gt;2.文件和目录的处理及操作&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;创建和删除文件及目录 &lt;br /&gt;
 &lt;code&gt;createFile()&lt;/code&gt;,&lt;code&gt;createDirectory()&lt;/code&gt;,&lt;code&gt;delete()&lt;/code&gt;,&lt;code&gt;deleteIfExists()&lt;/code&gt;,如果用&lt;code&gt;delteIfExists()&lt;/code&gt;删除目录，则目录必须为空&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;获取目录的对象&lt;br /&gt;
-使用newDirectoryStream()方法,&lt;code&gt;public static DirectoryStream&amp;lt;Path&amp;gt; newDirectoryStream(Path path)&lt;/code&gt;&lt;br /&gt;
-—
-&amp;gt;  代码实例：&lt;/p&gt;
+  &lt;li&gt;获取目录的对象&lt;br /&gt;
+使用newDirectoryStream()方法,&lt;code&gt;public static DirectoryStream&amp;lt;Path&amp;gt; newDirectoryStream(Path path)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-    &lt;blockquote&gt;
-      &lt;pre&gt;&lt;code&gt;    Path parent = Paths.get(&quot;/home/simple_chen/下载&quot;);
- 	try (DirectoryStream&amp;lt;Path&amp;gt; children = Files.newDirectoryStream(parent)){
- 	  for (Path child : children) {
-    	  System.out.println(child);
-       }
-     } catch (IOException e) {
-      		e.printStackTrace();
-     }    ---        
+&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;代码实例：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt;	    Path parent = Paths.get(&quot;/home/simple_chen/下载&quot;);
+    	try (DirectoryStream&amp;lt;Path&amp;gt; children = Files.newDirectoryStream(parent)){
+    	  for (Path child : children) {
+       	  System.out.println(child);
+          }
+        } catch (IOException e) {
+         		e.printStackTrace();
+        }       ---        
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
+
+&lt;ol&gt;
   &lt;li&gt;复制和文件移动
     &lt;ol&gt;
       &lt;li&gt;复制
@@ -176,11 +186,11 @@
 
 </description>
         <pubDate>Sat, 04 Jul 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/java/2015/07/04/Java-io/</link>
-        <guid isPermaLink="true">http://yourdomain.com/java/2015/07/04/Java-io/</guid>
+        <link>http://yourdomain.com/2015/07/04/Java-io/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/07/04/Java-io/</guid>
         
+        <category>Java</category>
         
-        <category>java</category>
         
       </item>
     
@@ -197,11 +207,11 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 03 Jul 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/javafx/2015/07/03/JavaFx-Property-and-Bindings/</link>
-        <guid isPermaLink="true">http://yourdomain.com/javafx/2015/07/03/JavaFx-Property-and-Bindings/</guid>
+        <link>http://yourdomain.com/2015/07/03/JavaFx-Property-and-Bindings/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/07/03/JavaFx-Property-and-Bindings/</guid>
         
+        <category>JavaFx</category>
         
-        <category>javafx</category>
         
       </item>
     
@@ -437,11 +447,11 @@ void Merge (int a[], int lo, int mid, int hi, int aux[])
 &lt;/code&gt;&lt;/pre&gt;
 </description>
         <pubDate>Mon, 22 Jun 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/%E7%AE%97%E6%B3%95/2015/06/22/sorting/</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E7%AE%97%E6%B3%95/2015/06/22/sorting/</guid>
-        
+        <link>http://yourdomain.com/2015/06/22/sorting/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/06/22/sorting/</guid>
         
         <category>算法</category>
+        
         
       </item>
     
@@ -455,11 +465,11 @@ void Merge (int a[], int lo, int mid, int hi, int aux[])
 
 </description>
         <pubDate>Sun, 21 Jun 2015 18:17:00 +0800</pubDate>
-        <link>http://yourdomain.com/diary/2015/06/21/My-first-journal/</link>
-        <guid isPermaLink="true">http://yourdomain.com/diary/2015/06/21/My-first-journal/</guid>
-        
+        <link>http://yourdomain.com/2015/06/21/My-first-journal/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/06/21/My-first-journal/</guid>
         
         <category>diary</category>
+        
         
       </item>
     

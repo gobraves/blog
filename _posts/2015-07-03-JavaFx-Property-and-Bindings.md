@@ -2,7 +2,7 @@
 layout: post
 title: Propertys and Bindings
 date: 2015-07-03
-categories: JavaFx
+tags: JavaFx
 excerpt: 
 ---
 

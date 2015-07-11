@@ -395,3 +395,36 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+.tags{
+  font-size: 30px;
+  text-decoration: none;
+  margin: 0 1px;
+  margin-bottom: 6px;
+  word-spacing: 10px;
+  color: #b6d7a8;
+}
+
+#tag_cloud a:hover,
+#tag_cloud .tag:hover,
+#tag_cloud a:active,
+#tag_cloud .tag:active {
+  background-color: #a2bde7 !important;
+    padding:10px; width:5px; height:30px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius:15px;
+    font-size: 30px;
+}
+
+a:link {
+ text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+}
+a:hover {
+ text-decoration: none;
+}
+a:active {
+ text-decoration: none;
+}
