@@ -5,6 +5,7 @@ description: "To be my hero"
 baseurl: ""
 url: "http://yourdomain.com"
 github_username:  gobraves
+gems: [jekyll-paginate]
 
 # Build settings
 markdown: kramdown

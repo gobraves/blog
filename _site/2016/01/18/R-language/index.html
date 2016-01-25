@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="To be my hero">
 
-    <title>About - GoBraves Blog</title>
+    <title>R language - GoBraves Blog</title>
 
-    <link rel="canonical" href="http://yourdomain.com/about/">
+    <link rel="canonical" href="http://yourdomain.com/2016/01/18/R-language/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,29 +75,117 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/about-bg.jpg')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/home-bg2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Go Braves</h1>
-                    <hr class="small">
-                    <span class="subheading">一个偶尔画画、写诗的程序猿</span>
+                <div class="post-heading">
+                    <h1>R language</h1>
+                    
+                    <span class="meta">Posted  on January 18, 2016</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-		</div>
-	</div>
-</div>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h2 id="r-language">R language</h2>
+<p>###atomic class of object</p>
+
+<ul>
+  <li>character</li>
+  <li>numeric(double precision real number)</li>
+  <li>integer(suffix L example:1L. It’s explicitly an integer)</li>
+  <li>complex</li>
+  <li>logical</li>
+</ul>
+
+<h3 id="basic-object--vector">basic object : vector</h3>
+<blockquote>
+  <p>vector can only contain objects of the same class</p>
+</blockquote>
+
+<ul>
+  <li>Inf(represent infinity example: 1/0)</li>
+  <li>NaN(not a number. eg: 0/0)</li>
+</ul>
+
+<h3 id="attributes">Attributes</h3>
+<p>R objects can have attributes
+- name,dimnames
+- dimensions(e.g. matrices, arrays)
+- class
+- length
+- other user-defined attributes/metadata
+attributes of an objec can be accessed using the attributes().</p>
+
+<h3 id="coercion">Coercion</h3>
+<p>####Implicit
+Example:
+- <code>x &lt;- c("TRUE","a",123)</code> –character
+- <code>x&lt;-c(TRUE,1,2,3)</code> –numeric
+- <code>x&lt;-c(TRUE,1L,2L,3L)</code> –integer</p>
+
+<h4 id="explicit">explicit</h4>
+<p>Example: <code>x &lt;- 0:6</code>
+- <code>as.numeric(x)</code>
+- <code>as.logical(x)</code>
+- <code>as.character(x)</code></p>
+
+<h3 id="list">list</h3>
+<p>a special type of vector that can contain elements of different classes</p>
+
+<h3 id="matrices">matrices</h3>
+<p>every element must be in the same class<br />
+<code>matrix(nrow = , ncol =  )</code> <br />
+<code>dim()</code><br />
+<code>attributes()</code><br />
+- upper left<br />
+  e.g.
+  - <code>m &lt;- matrix(1:6, nrow = 2, ncol = 3)</code>
+  - <code>m &lt;- 1:6</code>
+    <code>dim(m) &lt;- c(2,3)</code>
+- cbind() and rbind()</p>
+
+<h3 id="factors">Factors</h3>
+<p><code>x &lt;- factor(c("yes","yes","no","yes"))</code></p>
+
+<h3 id="missing-values">Missing Values</h3>
+<ul>
+  <li><code>is.na()</code> NA has class</li>
+  <li><code>is.nan()</code> NAN is also a NA</li>
+</ul>
+
+<h3 id="data-frame">data frame</h3>
+<p>can have different classes of objects in each column<br />
+special attributes:
+- row.names
+- created by calling <code>read.csv()</code> or <code>read.table()</code><br />
+- converted to a matrix by calling data.matrix()</p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/01/11/ml-index/" data-toggle="tooltip" data-placement="top" title="Ml Index">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 

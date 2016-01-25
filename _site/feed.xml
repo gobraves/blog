@@ -5,9 +5,414 @@
     <description>To be my hero</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 11 Jul 2015 23:00:48 +0800</pubDate>
-    <lastBuildDate>Sat, 11 Jul 2015 23:00:48 +0800</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Mon, 25 Jan 2016 20:30:39 +0800</pubDate>
+    <lastBuildDate>Mon, 25 Jan 2016 20:30:39 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>R language</title>
+        <description>&lt;h2 id=&quot;r-language&quot;&gt;R language&lt;/h2&gt;
+&lt;p&gt;###atomic class of object&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;character&lt;/li&gt;
+  &lt;li&gt;numeric(double precision real number)&lt;/li&gt;
+  &lt;li&gt;integer(suffix L example:1L. It’s explicitly an integer)&lt;/li&gt;
+  &lt;li&gt;complex&lt;/li&gt;
+  &lt;li&gt;logical&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;basic-object--vector&quot;&gt;basic object : vector&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;vector can only contain objects of the same class&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Inf(represent infinity example: 1/0)&lt;/li&gt;
+  &lt;li&gt;NaN(not a number. eg: 0/0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;attributes&quot;&gt;Attributes&lt;/h3&gt;
+&lt;p&gt;R objects can have attributes
+- name,dimnames
+- dimensions(e.g. matrices, arrays)
+- class
+- length
+- other user-defined attributes/metadata
+attributes of an objec can be accessed using the attributes().&lt;/p&gt;
+
+&lt;h3 id=&quot;coercion&quot;&gt;Coercion&lt;/h3&gt;
+&lt;p&gt;####Implicit
+Example:
+- &lt;code&gt;x &amp;lt;- c(&quot;TRUE&quot;,&quot;a&quot;,123)&lt;/code&gt; –character
+- &lt;code&gt;x&amp;lt;-c(TRUE,1,2,3)&lt;/code&gt; –numeric
+- &lt;code&gt;x&amp;lt;-c(TRUE,1L,2L,3L)&lt;/code&gt; –integer&lt;/p&gt;
+
+&lt;h4 id=&quot;explicit&quot;&gt;explicit&lt;/h4&gt;
+&lt;p&gt;Example: &lt;code&gt;x &amp;lt;- 0:6&lt;/code&gt;
+- &lt;code&gt;as.numeric(x)&lt;/code&gt;
+- &lt;code&gt;as.logical(x)&lt;/code&gt;
+- &lt;code&gt;as.character(x)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;list&quot;&gt;list&lt;/h3&gt;
+&lt;p&gt;a special type of vector that can contain elements of different classes&lt;/p&gt;
+
+&lt;h3 id=&quot;matrices&quot;&gt;matrices&lt;/h3&gt;
+&lt;p&gt;every element must be in the same class&lt;br /&gt;
+&lt;code&gt;matrix(nrow = , ncol =  )&lt;/code&gt; &lt;br /&gt;
+&lt;code&gt;dim()&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;attributes()&lt;/code&gt;&lt;br /&gt;
+- upper left&lt;br /&gt;
+  e.g.
+  - &lt;code&gt;m &amp;lt;- matrix(1:6, nrow = 2, ncol = 3)&lt;/code&gt;
+  - &lt;code&gt;m &amp;lt;- 1:6&lt;/code&gt;
+    &lt;code&gt;dim(m) &amp;lt;- c(2,3)&lt;/code&gt;
+- cbind() and rbind()&lt;/p&gt;
+
+&lt;h3 id=&quot;factors&quot;&gt;Factors&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;x &amp;lt;- factor(c(&quot;yes&quot;,&quot;yes&quot;,&quot;no&quot;,&quot;yes&quot;))&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;missing-values&quot;&gt;Missing Values&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;is.na()&lt;/code&gt; NA has class&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;is.nan()&lt;/code&gt; NAN is also a NA&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-frame&quot;&gt;data frame&lt;/h3&gt;
+&lt;p&gt;can have different classes of objects in each column&lt;br /&gt;
+special attributes:
+- row.names
+- created by calling &lt;code&gt;read.csv()&lt;/code&gt; or &lt;code&gt;read.table()&lt;/code&gt;&lt;br /&gt;
+- converted to a matrix by calling data.matrix()&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Jan 2016 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2016/01/18/R-language/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/01/18/R-language/</guid>
+        
+        <category>R</category>
+        
+        <category>ml</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Ml Index</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;when can machines learn?
+    &lt;ul&gt;
+      &lt;li&gt;The Learning Problem
+        &lt;ul&gt;
+          &lt;li&gt;what is machine learning?&lt;/li&gt;
+          &lt;li&gt;applications of machine learning&lt;/li&gt;
+          &lt;li&gt;components of machine learning&lt;/li&gt;
+          &lt;li&gt;machine learning and other fields&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Learning to Answer Yes/No
+        &lt;ul&gt;
+          &lt;li&gt;Perceptron Hypothesis set&lt;/li&gt;
+          &lt;li&gt;Perceptron Learning Algorithm(PLA)&lt;/li&gt;
+          &lt;li&gt;Guarantee of PLA&lt;/li&gt;
+          &lt;li&gt;Non-Separable Data&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Types of Learning
+        &lt;ul&gt;
+          &lt;li&gt;Learning with Different Output Space Y&lt;/li&gt;
+          &lt;li&gt;Learning with Different Data Label&lt;/li&gt;
+          &lt;li&gt;Learning with Different Protocol f&lt;/li&gt;
+          &lt;li&gt;Learning with Different Input Space X&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Learning is impossible?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;why can machines learn?&lt;/li&gt;
+  &lt;li&gt;how can machines learn?&lt;/li&gt;
+  &lt;li&gt;how can machines learn better?&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 11 Jan 2016 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2016/01/11/ml-index/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/01/11/ml-index/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Linux</title>
+        <description>&lt;p&gt;vsftpd:
+  /etc/vs….conf&lt;/p&gt;
+
+&lt;p&gt;useradd -d /home/ftp&lt;/p&gt;
+
+&lt;p&gt;passwd username
+pwd&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Jan 2016 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2016/01/05/linux/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/01/05/linux/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Docker</title>
+        <description>&lt;ol&gt;
+  &lt;li&gt;docker理念：创建软件程序可移植的轻量容器&lt;/li&gt;
+  &lt;li&gt;docker功能:
+    &lt;ul&gt;
+      &lt;li&gt;隔离应用依赖&lt;/li&gt;
+      &lt;li&gt;创建应用镜像并进行复制&lt;/li&gt;
+      &lt;li&gt;创建容易分发的即启即用的应用&lt;/li&gt;
+      &lt;li&gt;允许实例简单、快速的扩充&lt;/li&gt;
+      &lt;li&gt;测试应用并随后销毁它们&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;docker提供的资源和抽象，两个最重要的概念是镜像和容器
+    &lt;ul&gt;
+      &lt;li&gt;镜像&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 05 Jan 2016 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2016/01/05/docker/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/01/05/docker/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Operating system</title>
+        <description>&lt;h2 id=&quot;operating-system&quot;&gt;Operating System&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;- virtualize CPU
+  - time sharing
+  - process
+      - machine state
+          - memory
+          - registers
+              - program counter
+              - instruction pointer
+              - frame pointer
+              - stack pointer
+      - process api
+          - create
+          - destroy
+          - wait
+          - miscellaneous control
+          - status
+  - question about process
+      - how does os get a program up and running?
+      - how does process creation actually work?
+  - process states
+      - Running
+      - Ready
+      - Blocked
+  - mechanism
+      - problem: how to perform restricted operations
+      - solution: use protected control transfer
+          - user mode
+          - kernel mode
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Sun, 27 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/12/27/operating-system/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/12/27/operating-system/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pythonlearning1</title>
+        <description>&lt;h2 id=&quot;python&quot;&gt;python学习&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;学习一门语言，应该知道
+    &lt;ul&gt;
+      &lt;li&gt;基础数据类型&lt;/li&gt;
+      &lt;li&gt;基本的流程控制&lt;/li&gt;
+      &lt;li&gt;数据结构&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;尝试写一个程序时，需要知道如何做简单的输入和输出。
+    &lt;ul&gt;
+      &lt;li&gt;输入
+        &lt;ol&gt;
+          &lt;li&gt;从文件读取数据&lt;/li&gt;
+          &lt;li&gt;从键盘读取数据&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;输出
+        &lt;ol&gt;
+          &lt;li&gt;将结果显示在屏幕上&lt;/li&gt;
+          &lt;li&gt;将结果输出到文件中&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;鉴于时间间隔太大，先回忆下自己学过哪些&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;数据类型
+    &lt;ul&gt;
+      &lt;li&gt;number
+        &lt;ul&gt;
+          &lt;li&gt;+,-,*,/,//,%&lt;/li&gt;
+          &lt;li&gt;**,round&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;string
+        &lt;ul&gt;
+          &lt;li&gt;index&lt;/li&gt;
+          &lt;li&gt;slice&lt;/li&gt;
+          &lt;li&gt;+&lt;/li&gt;
+          &lt;li&gt;(‘’ ’’)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;数据结构
+    &lt;ul&gt;
+      &lt;li&gt;del statement&lt;/li&gt;
+      &lt;li&gt;list[]
+        &lt;ul&gt;
+          &lt;li&gt;index&lt;/li&gt;
+          &lt;li&gt;slice&lt;/li&gt;
+          &lt;li&gt;append = a.[len(a):] = [x]&lt;/li&gt;
+          &lt;li&gt;nest list&lt;/li&gt;
+          &lt;li&gt;extend = a.[len(a):] = L&lt;/li&gt;
+          &lt;li&gt;insert&lt;/li&gt;
+          &lt;li&gt;remove&lt;/li&gt;
+          &lt;li&gt;pop&lt;/li&gt;
+          &lt;li&gt;clear&lt;/li&gt;
+          &lt;li&gt;sort&lt;/li&gt;
+          &lt;li&gt;reverse&lt;/li&gt;
+          &lt;li&gt;copy&lt;/li&gt;
+          &lt;li&gt;count&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;tuple()&lt;/li&gt;
+      &lt;li&gt;set{}&lt;/li&gt;
+      &lt;li&gt;dictionary{,}&lt;/li&gt;
+      &lt;li&gt;sequence[]&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;控制语句
+    &lt;ul&gt;
+      &lt;li&gt;if
+        &lt;ul&gt;
+          &lt;li&gt;if…elif..else&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;for
+        &lt;ul&gt;
+          &lt;li&gt;for … in …&lt;/li&gt;
+          &lt;li&gt;for i in range(5)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;break,continue&lt;/li&gt;
+      &lt;li&gt;else on loops&lt;/li&gt;
+      &lt;li&gt;pass&lt;/li&gt;
+      &lt;li&gt;define&lt;/li&gt;
+      &lt;li&gt;Defining Functions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;f = open(‘xxx’,’r’);
+data = f.read();&lt;/p&gt;
+
+&lt;p&gt;new_data = data.split(‘,’)&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/12/27/PythonLearning1/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/12/27/PythonLearning1/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>写在看书之前</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;写在看书之前&lt;/h2&gt;
+&lt;p&gt;对于技术资料，学习之前头脑里一定要有一个概念，或者说是一个框架，即：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;这部分在讲什么&lt;/li&gt;
+  &lt;li&gt;我想知道什么&lt;/li&gt;
+  &lt;li&gt;这部分讲解的大致结构是怎样的&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;看书要求：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;有笔，有纸&lt;/li&gt;
+  &lt;li&gt;先总览后，画出大致的框架&lt;/li&gt;
+  &lt;li&gt;针对每一部分再画出框架&lt;/li&gt;
+  &lt;li&gt;经常问自己这块是在讲什么&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;总而言之就是一定知道自己目前在看什么&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/12/12/%E5%86%99-%E5%9C%A8-%E7%9C%8B-%E4%B9%A6-%E4%B9%8B-%E5%89%8D/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/12/12/%E5%86%99-%E5%9C%A8-%E7%9C%8B-%E4%B9%A6-%E4%B9%8B-%E5%89%8D/</guid>
+        
+        <category>随笔</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>一点点想法（1）</title>
+        <description>&lt;p&gt;想学ML,又想适当做些项目，其实不矛盾。适当的做项目可以让我很快实现模型，将更多的精力花在思考研究算法上。数学、线代、概率论是基础，即使不是从头啃一遍，但也要经常翻经常看
+ML的确看得很痛苦，但只是第一步，坚持下去就好了，加油！&lt;/p&gt;
+</description>
+        <pubDate>Mon, 27 Jul 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/07/27/%E4%B8%80-%E7%82%B9-%E7%82%B9-%E6%83%B3-%E6%B3%95/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/07/27/%E4%B8%80-%E7%82%B9-%E7%82%B9-%E6%83%B3-%E6%B3%95/</guid>
+        
+        <category>随笔</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>七月八月书单</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;暑期书单&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;img src=&quot;../img/book/bdiveintopython.jpg&quot; alt=&quot;dive into python3&quot; title=&quot;dive into python3&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;img src=&quot;../img/book/bml.jpg&quot; alt=&quot;机器学习&quot; title=&quot;机器学习&quot; /&gt;&lt;br /&gt;
+入门书籍&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;img src=&quot;../img/book/bmla.jpg&quot; alt=&quot;机器学习实战&quot; title=&quot;机器学习实战&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;img src=&quot;../img/book/bmsl.jpg&quot; alt=&quot;统计学习方法&quot; title=&quot;统计学习方法&quot; /&gt;&lt;br /&gt;
+与上一本书结合起来看&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;img src=&quot;../img/book/balgorithm.jpg&quot; alt=&quot;算法&quot; title=&quot;算法&quot; /&gt;&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;复习&lt;/li&gt;
+      &lt;li&gt;做习题&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 16 Jul 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2015/07/16/%E6%9A%91-%E6%9C%9F-%E4%B9%A6-%E5%8D%95/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/07/16/%E6%9A%91-%E6%9C%9F-%E4%B9%A6-%E5%8D%95/</guid>
+        
+        <category>书单</category>
+        
+        
+      </item>
     
       <item>
         <title>输入/输出</title>
@@ -190,285 +595,6 @@
         <guid isPermaLink="true">http://yourdomain.com/2015/07/04/Java-io/</guid>
         
         <category>Java</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Propertys and Bindings</title>
-        <description>&lt;h2 id=&quot;i-need-to-know&quot;&gt;I need to know&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;What is a Property?&lt;/li&gt;
-  &lt;li&gt;How to create a property object and use it.&lt;/li&gt;
-  &lt;li&gt;The class hierarchy of properties in javafx&lt;/li&gt;
-  &lt;li&gt;How to handle the invalidation and change events in a property object&lt;/li&gt;
-  &lt;li&gt;What a bingding is in JavaFx and how to use unidirectional an bidirectional bindings.&lt;/li&gt;
-  &lt;li&gt;About the high-level and low-level bingdings API in JavaFX&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 03 Jul 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/07/03/JavaFx-Property-and-Bindings/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/07/03/JavaFx-Property-and-Bindings/</guid>
-        
-        <category>JavaFx</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>排序整理</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;冒泡排序&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;选择排序&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;插入排序&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;希尔排序&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;快速排序&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#edition&quot; id=&quot;markdown-toc-edition&quot;&gt;1 edition&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#edition-1&quot; id=&quot;markdown-toc-edition-1&quot;&gt;2 edition&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#edition-2&quot; id=&quot;markdown-toc-edition-2&quot;&gt;3 edition&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;归并排序&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;《算法》第四版复习整理（c语言）&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;pre&gt;&lt;code&gt;void swap(int &amp;amp;i, int &amp;amp;j) 
-{
-	int temp = i;
-	i = j;
-	j = temp; 
-}    
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;冒泡排序&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;void BubbleSort(int a[], int n) 
-{
-	for(int i = 0; i &amp;lt; n; i++)  
-		for (int j = 1; j &amp;lt; n - i; ++j)  
-		{
-			if(a[j-1] &amp;gt; a[j]) 
-			{	
-				swap(a[j-1],a[j]);
-			}
-		}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;选择排序&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;void SelectSort(int a[], int n) 
-{
-	int i,j,min;
-	int temp;
-	for (i = 0; i &amp;lt; n; ++i)
-	{
-		min = i;
-		for (j = i+1; j &amp;lt; n; ++j)
-		{
-			if (a[min] &amp;gt; a[j])
-			min = j;
-		}
-		swap(a[i],a[min]);
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;插入排序&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;void InsertSort(int a[], int n)
-{
-	int i,j;
-	for (int i = 0; i &amp;lt; n; ++i)
-	{
-		for (int j = i; j &amp;gt; 0 &amp;amp;&amp;amp; (a[j] &amp;lt; a[j-1]) ; --j)
-		swap(a[j],a[j-1]);
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;section-3&quot;&gt;希尔排序&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;void ShellSort(int a[], int n) 
-{
-	int h = 1;
-	int i,j;
-	while(h &amp;lt; n/3)
-	h = 3*h + 1;
-	while(h &amp;gt;= 1) 
-	{
-		for (i = h; i &amp;lt; n; ++i)
-		{
-			for (j = i; j &amp;gt;= h &amp;amp;&amp;amp; (a[j] &amp;lt; a[j-h]); j -= h)
-			swap(a[j],a[j-h]);
-		}	
-		h = h/3;
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;section-4&quot;&gt;快速排序&lt;/h2&gt;
-
-&lt;h3 id=&quot;edition&quot;&gt;1 edition&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;	void QuickSort(int v[], int left, int right) 
-	{
-		int i, last;
-		if (left &amp;gt;= right)
-			return;
-		swap(v[left], v[(left+right)/2]);
-			last = left;
-		for (i = 0; i &amp;lt; right; ++i)
-			if (v[i] &amp;lt; v[left])
-				swap(++last, i);
-		swap(left,last);
-		QuickSort(v,left,last-1);
-		QuickSort(v,last+1,right);
-	}  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;edition-1&quot;&gt;2 edition&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;	void QuickSort(int a[], int n) 
-	{
-		//1.random shuffle 消除对输入的依赖
-		//2.Sort(a,0,n-1);
-   	 	}
-
-	void Sort(int a[], int lo, int hi)
-	{
-		if (hi &amp;gt; lo)
-		{
-			int j = partition(a, lo, hi);
-			sort(a, lo, j-1);
-			sort(a, j+1, hi);
-		}
-	}
-
-	int partition(int a[], int lo, int hi) 
-	{
-   		// hi + 1 是一个技巧
-   		int i = lo, j = hi+1;
-   		int v = a[lo];
-   		while(true) 
-   		{
-   		while (a[++i] &amp;lt; v) 
-   		if (i == hi)
-   		break;
-   		while (v &amp;lt; a[--j])
-   		if (j == lo) 
-   		break;
-   		if (i &amp;gt;= j)
-   		break;
-   		swap(a[i],a[j]); 
-    	}
-   		swap(a[lo],a[j]);
-   		return j;
-	}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;edition-2&quot;&gt;3 edition&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;	void QuickSort(int a[], int lo, int hi) 
-	{
-		int i = lo, j = hi; 
-		int temp;
-		if (hi &amp;gt; lo)
-		{
-			temp = a[lo];
-			while (i != j)
-			{
-				while (j &amp;gt; i &amp;amp;&amp;amp; a[j] &amp;gt;= temp)
-				{
-				j--;
-				}
-				a[i] = a[j];
-				while (i &amp;lt; j &amp;amp;&amp;amp; a[i] &amp;lt;= temp)
-				{
-					i++;
-				}
-				a[j] = a[i];
-			}
-			a[i] = temp;
-			QuickSort(a, lo , i - 1);
-			QuickSort(a, i + 1, hi);
-		}	
-	}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;版本2和版本3的区别在于，版本2的是让两边同时进行比较，在两边都不符合条件的情况下交换，直至i和j相等。版本3若是右边一边比较不符合条件，则移至另一边比较，直至i和j相等。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;section-5&quot;&gt;归并排序&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;bool MergeSort(int a[], int n); 
-{
-   int aux[n];
- 	   sort(a,0,n-1,aux);
- 	   return true;
-} 
-
-//自底向下
-void Sort(int a[], int lo, int hi,int aux[])
-{
-   if (hi &amp;gt; lo) 
-   {
-   	  int mid = lo + (hi - lo)/2;
-   	  Sort(a, lo, mid);
-   	  Sort(a, mid+1, hi);
-   	  Merge(a, lo, mid, hi, aux);
-   }
-}
-
-//自底向上
-void Sort(int a[], int n, int aux)
-{
-   for(int sz = 1; sz &amp;lt; n; sz = sz + sz)
-      for(int lo = 0; lo &amp;lt; n - sz; lo += sz+sz)
-        // c语言没有min函数
-         Merge(a, lo, lo+sz-1; Math.min(lo+sz+sz-1, n-1));
-}
-
-void Merge (int a[], int lo, int mid, int hi, int aux[])
-{	
-	int i = lo, j = mid + 1;
-	//辅助变量
-	int k;
-	for(k = lo; k &amp;lt;= hi; k++)
-	{
-		aux[k] = a[k];
-	}
-
-	for (k = lo; k &amp;lt;= hi; k++) 
-		if      (i &amp;gt; mid)           a[k] = aux[j++];
-		else if (j &amp;gt; hi )           a[k] = aux[i++];
-		else if (aux[j] &amp;lt; aux[i])   a[k] = aux[j++];
-		else                        a[k] = aux[i++];
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-        <pubDate>Mon, 22 Jun 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/06/22/sorting/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/06/22/sorting/</guid>
-        
-        <category>算法</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>My first journal</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#test&quot; id=&quot;markdown-toc-test&quot;&gt;test&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;test&quot;&gt;test&lt;/h2&gt;
-
-</description>
-        <pubDate>Sun, 21 Jun 2015 18:17:00 +0800</pubDate>
-        <link>http://yourdomain.com/2015/06/21/My-first-journal/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/06/21/My-first-journal/</guid>
-        
-        <category>diary</category>
         
         
       </item>
