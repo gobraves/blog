@@ -8,6 +8,7 @@ excerpt:
 
 
 ##R language
+
 ###atomic class of object
 
 - character
@@ -71,7 +72,26 @@ every element must be in the same class
 
 ###data frame  
 can have different classes of objects in each column  
-special attributes:
+special attributes:  
 - row.names  
 - created by calling `read.csv()` or `read.table()`  
 - converted to a matrix by calling data.matrix()  
+
+###name attribute  
+
+- vector  
+`x <- 1:3`  
+`names(x) <- c("a","b","c")`
+
+| a | b |c|
+|:--|:--|:--|
+| 1 |2 | 3 |
+
+- matrix  
+`m <- matrix(1:4, nrow = 2, ncol = 2)`  
+`dimnames(m) <- list(c("a","b"),c("c","d"))`
+
+||c|d|
+|:--|:--|:--|
+|a|1|3|
+|b|2|4|
