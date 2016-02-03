@@ -69,7 +69,10 @@ theme: next
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:gobraves/gobraves.github.io.git
+  branch: master
+  message: hexo test
 
 # duoshuo
 duoshuo_shortname: gobraves
