@@ -5,6 +5,7 @@ date: 2016-02-06
 tags: leetcode
 categories: Be My Hero
 ---
+
 ```
 \\Given an array of words and a length L, format the text such that each line has exactly L characters and is fully (left and \\right) justified.
 
