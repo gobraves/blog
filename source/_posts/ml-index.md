@@ -3,6 +3,7 @@ layout: post
 title: 台大Machine Learning笔记目录
 tags: ml
 categories: note
+date: 2016-02-06
 ---
 - when can machines learn?  
     - The Learning Problem  
