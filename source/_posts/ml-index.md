@@ -32,6 +32,10 @@ date: 2016-02-06
         - Effective Number of Lines
         - Effective Number of Hypothesis
         - Break Point
-
+    - Theory of Generalization
+        - Restriction of Break Point
+        - Bounding Function: Basic Cases
+        - Bounding Function: Inductive Cases
+        - A Pictorial Proof
 - how can machines learn?  
 - how can machines learn better?   
