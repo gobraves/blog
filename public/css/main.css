@@ -286,9 +286,6 @@ a:hover {
   color: #222;
   border-bottom-color: #222;
 }
-ul {
-  list-style: none;
-}
 blockquote {
   margin: 0;
   padding: 0;
@@ -1541,7 +1538,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0ef6f7;
+  background: #e411e7;
 }
 .sidebar-nav {
   margin: 0 0 20px;
