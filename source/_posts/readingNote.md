@@ -18,8 +18,6 @@ categories: note
 1. 错误率与精度
 错误率：
 <% raw %>
-<script type="text/javascript" src="/vendors/MathJax/MathJax.js">
-</script>
 E(f;D)=\frac{1}{m}\sum_{i=1}^{m}=
 \begin{cases}
 1, &f(x_{i})\neq y_{i}\cr 0,&f(x_{i}) =  y_{i}
