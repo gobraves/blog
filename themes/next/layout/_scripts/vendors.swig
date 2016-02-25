@@ -5,6 +5,7 @@
     'jquery_lazyload/jquery.lazyload.js?v=1.9.7',
     'velocity/velocity.min.js',
     'velocity/velocity.ui.min.js'
+    'MathJax/MathJax.js'
   ]
 %}
 
