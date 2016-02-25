@@ -19,7 +19,7 @@ categories: note
 错误率：
 <% raw %>
 <script type="text/javascript">
-MathJax.js
+/vendors/MathJax/MathJax.js
 </script>
 E(f;D)=\frac{1}{m}\sum_{i=1}^{m}=
 \begin{cases}
