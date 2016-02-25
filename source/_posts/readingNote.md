@@ -18,8 +18,7 @@ categories: note
 1. 错误率与精度
 错误率：
 <% raw %>
-<script type="text/javascript">
-/vendors/MathJax/MathJax.js
+<script type="text/javascript" src="/vendors/MathJax/MathJax.js">
 </script>
 E(f;D)=\frac{1}{m}\sum_{i=1}^{m}=
 \begin{cases}
