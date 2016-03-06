@@ -58,18 +58,33 @@
 
 
 <meta name="description" content="如果要在另一台电脑上更新博客，得先删除.deploy_git，我也不知道为什么，折腾了一两个小时，终于弄好啦
-rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是ext,可以使用debugfs和extundelete恢复。具体过程没看，先知道有这么回事吧">
+rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是ext,可以使用debugfs和extundelete恢复。具体过程没看，先知道有这么回事吧
+
+
+2.23很多命令平时用的少，但每次到用的时候就忘了，今天整理两个   
+
+grub-mkconfig  -o filename">
 <meta property="og:type" content="article">
 <meta property="og:title" content="零碎见识或者经验吧">
 <meta property="og:url" content="http://yoursite.com/2016/02/09/见识/index.html">
 <meta property="og:site_name" content="Sea">
 <meta property="og:description" content="如果要在另一台电脑上更新博客，得先删除.deploy_git，我也不知道为什么，折腾了一两个小时，终于弄好啦
-rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是ext,可以使用debugfs和extundelete恢复。具体过程没看，先知道有这么回事吧">
-<meta property="og:updated_time" content="2016-02-08T17:46:14.013Z">
+rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是ext,可以使用debugfs和extundelete恢复。具体过程没看，先知道有这么回事吧
+
+
+2.23很多命令平时用的少，但每次到用的时候就忘了，今天整理两个   
+
+grub-mkconfig  -o filename">
+<meta property="og:updated_time" content="2016-02-24T13:50:22.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="零碎见识或者经验吧">
 <meta name="twitter:description" content="如果要在另一台电脑上更新博客，得先删除.deploy_git，我也不知道为什么，折腾了一两个小时，终于弄好啦
-rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是ext,可以使用debugfs和extundelete恢复。具体过程没看，先知道有这么回事吧">
+rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是ext,可以使用debugfs和extundelete恢复。具体过程没看，先知道有这么回事吧
+
+
+2.23很多命令平时用的少，但每次到用的时候就忘了，今天整理两个   
+
+grub-mkconfig  -o filename">
 
 
 
@@ -286,6 +301,18 @@ rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是e
 <li>如果要在另一台电脑上更新博客，得先删除.deploy_git，我也不知道为什么，折腾了一两个小时，终于弄好啦</li>
 <li>rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是ext,可以使用debugfs和extundelete恢复。<br>具体过程没看，先知道有这么回事吧</li>
 </ol>
+<hr>
+<p>2.23<br>很多命令平时用的少，但每次到用的时候就忘了，今天整理两个   </p>
+<ol>
+<li><code>grub-mkconfig  -o filename</code>   </li>
+<li>windows引导修复，<code>bcdboot  system driver    efi driver</code>,对于efi的卷标可以在diskpart中设置</li>
+</ol>
+<hr>
+<p>2.24</p>
+<ol>
+<li><code>fdisk partition -l</code> 能显示分区类型</li>
+<li><code>partx -s /dev/sda</code> 能显示uuid<br>都能显示卷号，扇区的起始位置、扇区大小和容量</li>
+</ol>
 
       
     </div>
@@ -310,6 +337,10 @@ rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是e
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/25/readingNote/" rel="prev" title="机器学习读书笔记">
+                机器学习读书笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -381,7 +412,7 @@ rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是e
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -506,6 +537,8 @@ rm -rf 删除的文件或文件夹是有办法恢复的，如果文件系统是e
   <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
 
   <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/MathJax/MathJax.js"></script>
 
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
 
