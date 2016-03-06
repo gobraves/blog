@@ -23,7 +23,6 @@ categories: note
 精度：
 
 $$acc(f;D) = \frac{1}{m}\sum_{i = 1}^{m}=\begin{cases}\end{cases}$$
-
 <script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  src="http://cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
