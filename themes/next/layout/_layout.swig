@@ -64,9 +64,10 @@
 
   {% include '_scripts/third-party/comments.swig' %}
   {% include '_scripts/third-party/tinysou.swig' %}
-  {% include '_scripts/third-party/mathjax.swig' %}
   {% include '_scripts/third-party/baidushare.swig' %}
   {% include '_scripts/third-party/lean-analytics.swig' %}
-
+  <script type="text/javascript" async
+    src="http://cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
 </body>
 </html>
