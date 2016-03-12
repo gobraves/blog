@@ -5,7 +5,7 @@ date: 2016-03-12
 categories: note
 ---
 
-###hexo博客搭建
+### hexo博客搭建
 
 - hexo原始目录
 - 生成public目录
