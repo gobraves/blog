@@ -1,4 +1,12 @@
+---
+layout: post
+title: Compile the Linux Kernel
+date: 2016-03-23
+categories: note
+---
+
 ###Compile the Linux Kernel 
+
 1. download the linux kernel source code
 2. cd the source code dir
 3. `make distclean`
