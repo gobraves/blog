@@ -5,7 +5,7 @@ date: 2016-03-23
 categories: note
 ---
 
-###Compile the Linux Kernel 
+### Compile the Linux Kernel 
 
 1. download the linux kernel source code
 2. cd the source code dir
@@ -16,8 +16,8 @@ categories: note
 7. `cp system.map /boot/System.map-version`
 8. `cp .config /boot/config-version`
 9. `update-grub`
+10. `reboot`
 
 > `bindeb-pkg` or `binrpm-pkg` could substitute step 5 to step 9. Then `dpkg -i kernel.deb` or `rpm -i kernel.rpm`
 
-10. `reboot`
 
