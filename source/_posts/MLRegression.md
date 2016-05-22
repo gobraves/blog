@@ -36,14 +36,14 @@ categories: ML华大课程笔记
 ----
 ## Simple Regression
 ### Regression Fundamentals
-	- Data
-		- input
-		- output
-	- model
-		- y_{i}=f(x_{i})+\varepsilon_{i}
-		- \sum (\varepsilon_i) = 0 is expected 
-		- it means y_{i} is eqully likely to be below or above f(x_{i})
-	- Task
-		- which is model f(x)
-		- for a given model f(x), estimate function f hat (x) from data 
-	- 
+- Data
+	- input
+	- output
+- model
+	- y_{i}=f(x_{i})+\varepsilon_{i}
+	- \sum (\varepsilon_i) = 0 is expected 
+	- it means y_{i} is eqully likely to be below or above f(x_{i})
+- Task
+	- which is model f(x)
+	- for a given model f(x), estimate function f hat (x) from data 
+- 
