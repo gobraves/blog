@@ -14,3 +14,7 @@ hs_err_pid*
 # ignore filefolder
 node_modules/
 public/
+
+# ignore file
+.deploy_git
+db.json
