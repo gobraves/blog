@@ -1,7 +1,7 @@
 ---
 type: post
 title: ML-Classification
-Date: 2016-03-25
+date: 2016-03-25
 categories: ML华大课程笔记
 ---
 
