@@ -3,7 +3,7 @@ layout: post
 title: 输入/输出
 date: 2015-07-04
 tags: Java
-categories: note
+categories: Note
 ---
 ### 输入/输出
 1. 文件系统和路径

@@ -2,7 +2,7 @@
 layout: post
 title: 上传文件时忽略某些文件或文件夹或特定类型的文件
 date: 2016-02-08
-tags: git
+tags: Git
 categories: Be My Hero
 ---
 

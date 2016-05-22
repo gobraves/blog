@@ -2,7 +2,7 @@
 layout: post
 title: 零碎见识或者经验吧
 date: 2016-02-09
-tags: note
+tags: Note
 categories: Be My Hero
 ---
 
@@ -27,3 +27,9 @@ categories: Be My Hero
 2. ffmpeg -i input.mp4 -ss start.time -t stop.time -acopy copy -vcopy copy output.mp4
 time format: 00:00:00
 also how much seconds eg: 90
+
+---
+4.4
+1. postgresql /etc/postgresql/9.4/main/pg_hba.conf
+2. 创建用户并设置密码
+3. 导入sql文件

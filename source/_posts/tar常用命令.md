@@ -2,7 +2,7 @@
 layout: post
 title: tar常用命令
 date: 2016-02-08
-tags: tar
+tags: Note
 categories: Be My Hero
 ---
 

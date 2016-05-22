@@ -3,7 +3,7 @@ layout: post
 title: 排序整理
 date: 2015-06-22
 tags: 算法
-categorys: note
+categories: Note
 ---
 
 

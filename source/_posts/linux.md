@@ -1,9 +1,9 @@
 ---
 layout: post
-title: vsftpd test
+title: Vsftpd Test
 date: 2016-01-02
-tags: network
-categories: note
+tags: Network
+categories: Note
 ---
 vsftpd:
   /etc/vs....conf

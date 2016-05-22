@@ -2,7 +2,7 @@
 layout: post
 title: hexo博客搭建
 date: 2016-03-12
-categories: note
+categories: Note
 ---
 
 ### hexo博客搭建

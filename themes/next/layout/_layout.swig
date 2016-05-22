@@ -21,7 +21,7 @@
   {% endif %}
 
   <div class="{{ container_class }} {% block page_class %}{% endblock %} ">
-    <!-- <div class="headband"></div> -->
+    <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
@@ -29,7 +29,6 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div class="headband"></div>
         <div class="content-wrap">
           <div id="content" class="content">
             {% block content %}{% endblock %}
@@ -37,7 +36,7 @@
           {% include '_partials/duoshuo-hot-articles.swig' %}
           {% include '_partials/comments.swig' %}
         </div>
-        {% if theme.sidebar !== 'remove' %}
+        {% if theme.sidebar.display !== 'remove' %}
           {% block sidebar %}{% endblock %}
         {% endif %}
       </div>
@@ -46,10 +45,14 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         {% include '_partials/footer.swig' %}
+        {% include '_scripts/third-party/analytics/busuanzi-counter.swig' %}
+        {% block footer %}{% endblock %}
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
   {% include '_scripts/vendors.swig' %}
@@ -64,10 +67,10 @@
 
   {% include '_scripts/third-party/comments.swig' %}
   {% include '_scripts/third-party/tinysou.swig' %}
-  {% include '_scripts/third-party/baidushare.swig' %}
+  {% include '_scripts/third-party/localsearch.swig' %}
+  {% include '_scripts/third-party/mathjax.swig' %}
   {% include '_scripts/third-party/lean-analytics.swig' %}
-  <script type="text/javascript" async
-    src="http://cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  {% include '_scripts/baidu-push.swig' %}
+
 </body>
 </html>
