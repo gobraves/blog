@@ -12,3 +12,4 @@ useradd -d /home/ftp
 
 passwd username
 pwd
+
