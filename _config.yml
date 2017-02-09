@@ -20,7 +20,7 @@ permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: ../public
+public_dir: ../blog
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
@@ -70,7 +70,7 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:gobraves/gobraves.github.io.git
+  repo: git@gobraves.me:/root/blog.git
   branch: master
   message: hexo test
 
