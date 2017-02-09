@@ -5,7 +5,7 @@
 # Site
 title: Sea
 subtitle: 屠龙少年的自留地
-description: 公主已经死了，我还是那个屠龙的少年。
+description: 想看的是草长鹰飞，不是草长莺飞
 avatar: /images/avatar.jpg
 author: 吃西瓜不吐籽
 language: zh-Hans
@@ -70,9 +70,9 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@www.gobraves.me:/home/ubuntu/blog.git
+  repo: git@www.gobraves.me:/home/git/blog.git
   branch: master
-  message: hexo test
+  message: hexo
 
 # duoshuo
 duoshuo_shortname: gobraves
