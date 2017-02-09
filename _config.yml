@@ -70,7 +70,7 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:gobraves/gobraves.github.io.git
+  repo: git@www.gobraves.me:/home/ubuntu/blog.git
   branch: master
   message: hexo test
 
