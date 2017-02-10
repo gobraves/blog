@@ -1,6 +1,6 @@
 ---
 type: post  
-title: ML-Regression  
+title: ML Regression  
 date: 2016/3/25  
 tags: Machine Learning
 categories: Note

@@ -1,6 +1,6 @@
 ---
 layout: post  
-title: regex_learning 
+title: regex learning 
 date: 2016/08/26 
 tags: 
 
