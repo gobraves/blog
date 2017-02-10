@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 上传文件时忽略某些文件或文件夹或特定类型的文件
+title: gitignore学习
 date: 2016-02-08
 tags: Git
-categories: Be My Hero
+categories: Note
 ---
 
 在.gitignore中编辑

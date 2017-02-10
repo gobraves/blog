@@ -2,7 +2,8 @@
 type: post
 title: ML-Classification
 date: 2016-03-25
-categories: ML华大课程笔记
+tags: Machine Learning
+categories: Note
 ---
 
 

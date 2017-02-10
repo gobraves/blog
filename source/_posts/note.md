@@ -2,8 +2,8 @@
 layout: post
 title: 零碎见识或者经验吧
 date: 2016-02-09
-tags: Note
-categories: Be My Hero
+tags: 折腾
+categories: Note
 ---
 
 1. 如果要在另一台电脑上更新博客，得先删除.deploy_git，我也不知道为什么，折腾了一两个小时，终于弄好啦

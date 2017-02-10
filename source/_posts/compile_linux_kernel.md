@@ -2,6 +2,7 @@
 layout: post
 title: Compile the Linux Kernel
 date: 2016-03-23
+tags: linux
 categories: Note
 ---
 

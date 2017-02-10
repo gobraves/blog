@@ -1,6 +1,8 @@
 title: numpy,matplotlib,pandas学习
 date: 2016/4/5
 description: numpy,matplitlib,pandas学习小结
+tags: Machine Learning
+categories: Note
 ---
 
 ## numpy,matplotlib,pandas三大工具学习

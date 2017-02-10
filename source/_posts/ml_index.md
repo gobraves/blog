@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 台大Machine Learning笔记目录
-tags: ML
+tags: Machine Learning
 categories: Note
 date: 2016-02-06
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Text Justification
 date: 2016-02-06
 tags: leetcode
-categories: Be My Hero
+categories: Exercise
 ---
 
 

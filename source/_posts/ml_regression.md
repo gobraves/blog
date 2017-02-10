@@ -2,7 +2,8 @@
 type: post  
 title: ML-Regression  
 date: 2016/3/25  
-categories: ML华大课程笔记 
+tags: Machine Learning
+categories: Note
 
 ---
 

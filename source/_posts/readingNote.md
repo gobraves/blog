@@ -2,7 +2,7 @@
 layout: post
 title: 机器学习读书笔记
 date: 2016-02-25
-tag: ML
+tag: Machine Learning
 categories: Note
 ---
 ## 第二章 模型评估与选择

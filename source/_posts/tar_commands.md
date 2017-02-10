@@ -2,8 +2,8 @@
 layout: post
 title: tar常用命令
 date: 2016-02-08
-tags: Note
-categories: Be My Hero
+tags: 折腾
+categories: Note
 ---
 
 打包
