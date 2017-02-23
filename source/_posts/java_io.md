@@ -2,8 +2,8 @@
 layout: post
 title: 输入/输出
 date: 2015-07-04
-tags: Java
-categories: Note
+tags: Note
+categories: Java
 ---
 ### 输入/输出
 1. 文件系统和路径

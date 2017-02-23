@@ -2,8 +2,7 @@
 layout: post
 title: Vsftpd Test
 date: 2016-01-02
-tags: 折腾
-categories: Note
+tags: Note
 ---
 vsftpd:
   /etc/vs....conf

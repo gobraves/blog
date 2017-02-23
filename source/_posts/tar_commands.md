@@ -2,8 +2,7 @@
 layout: post
 title: tar常用命令
 date: 2016-02-08
-tags: 折腾
-categories: Note
+tags: Note
 ---
 
 打包

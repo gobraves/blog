@@ -2,8 +2,7 @@
 layout: post
 title: docker
 date: 2016-01-04
-tags: docker
-categories: Note
+tags: Note
 ---
 1. docker理念：创建软件程序可移植的轻量容器
 2. docker功能:

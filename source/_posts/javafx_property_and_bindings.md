@@ -2,8 +2,8 @@
 layout: post
 title: Propertys and Bindings
 date: 2015-07-03
-tags: JavaFx
-categories: Note
+tags: Note
+categories: Java
 ---
 
 ## I need to know

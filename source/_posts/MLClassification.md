@@ -2,8 +2,8 @@
 type: post
 title: ML Classification
 date: 2016-03-25
-tags: Machine Learning
-categories: Note
+tags: Note
+categories: Machine Learning
 ---
 
 

@@ -2,8 +2,7 @@
 layout: post
 title: gitignore学习
 date: 2016-02-08
-tags: Git
-categories: Note
+tags: Note
 ---
 
 在.gitignore中编辑

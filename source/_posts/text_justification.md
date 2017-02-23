@@ -2,8 +2,8 @@
 layout: post
 title: Text Justification
 date: 2016-02-06
-tags: leetcode
-categories: Exercise
+tags: Exercise
+categories: Leetcode
 ---
 
 

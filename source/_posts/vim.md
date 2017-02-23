@@ -2,8 +2,7 @@
 type: post
 title: vim command list
 date: 2016-03-25
-tags: 折腾
-categories: Note
+tags: Note
 ---
 ## vim
 ### 分屏

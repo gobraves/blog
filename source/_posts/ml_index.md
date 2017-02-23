@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 台大Machine Learning笔记目录
-tags: Machine Learning
-categories: Note
+tags: Note
+categories: Machine Learning
 date: 2016-02-06
 ---
 - when can machines learn?  

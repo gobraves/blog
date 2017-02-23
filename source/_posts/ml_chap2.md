@@ -2,8 +2,8 @@
 layout: post
 title: 机器学习基石第二章
 date: 2017-02-22
-tags: Machine Learning 
-categories: Note
+tags: Note
+categories: Machine Learning 
 ---
 # Perceptron
 

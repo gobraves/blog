@@ -2,8 +2,8 @@
 layout: post
 title: Python学习
 date: 2016-01-06
-tags: Python
-categories: Note
+tags: Note
+categories: Python
 ---
 
 ### python学习

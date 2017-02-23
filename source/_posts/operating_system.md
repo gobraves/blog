@@ -2,8 +2,8 @@
 layout: post
 title: "OS Note"
 date: 2015-12-25
-tags: OS
-categories: Note
+tags: Note
+categories: OS
 ---
 
 ## Operating System  

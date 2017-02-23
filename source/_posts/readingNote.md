@@ -2,8 +2,8 @@
 layout: post
 title: 机器学习读书笔记
 date: 2016-02-25
-tag: Machine Learning
-categories: Note
+tag: Note
+categories: Machine Learning
 ---
 ## 第二章 模型评估与选择
 ### 2.1 经验误差与过拟合

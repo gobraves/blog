@@ -2,8 +2,8 @@
 layout: post
 title: R language
 date: 2016-01-18
-tags: R
-categories: note
+tags: Note
+categories: R
 ---
 
 
