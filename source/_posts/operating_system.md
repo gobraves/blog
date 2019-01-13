@@ -2,8 +2,7 @@
 layout: post
 title: "OS Note"
 date: 2015-12-25
-tags: Note
-categories: OS
+categories: 操作系统
 ---
 
 ## Operating System  

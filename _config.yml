@@ -8,7 +8,7 @@ subtitle: 屠龙少年的自留地
 description: 想看的是草长鹰飞，不是草长莺飞
 avatar: /images/avatar.jpg
 author: 吃西瓜不吐籽
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
@@ -20,7 +20,7 @@ permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: ../blog
+public_dir: ../blog_test
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
@@ -70,7 +70,7 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@www.gobraves.me:/home/git/blog.git
+  repo: git@47.101.154.168:/home/git/blog
   branch: master
   message: hexo
 

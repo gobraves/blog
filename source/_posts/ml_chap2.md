@@ -3,6 +3,7 @@ layout: post
 title: 机器学习基石第二章
 date: 2017-02-22
 tags: Note
+mathjax: true
 categories: Machine Learning 
 ---
 # Perceptron
