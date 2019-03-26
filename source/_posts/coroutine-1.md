@@ -1,8 +1,9 @@
 ---
 type: post
-title: 协程
+title: 协程(1)
 date: 2018-12-20
-tags: Python
+tags: Coroutine
+categories: Python
 ---
 # coroutine
 

@@ -2,10 +2,10 @@
 layout: post  
 title: celery_learning.md 
 date: 2018/03/24 
-tags: 
+tags: celery
 
 categories: 
- - python
+ - Python
  
 ---
 
