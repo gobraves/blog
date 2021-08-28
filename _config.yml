@@ -64,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: jekyll-theme-cayman
+theme: next
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

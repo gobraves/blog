@@ -14,7 +14,9 @@ hs_err_pid*
 # ignore filefolder
 node_modules/
 public/
+theme/
 
 # ignore file
 .deploy_git
 db.json
+package-lock.json
