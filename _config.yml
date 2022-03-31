@@ -42,7 +42,15 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace:
+  tab_replace: ''
+  wrap: false #false
+  hljs: false
+
+prismjs:
+  enable: true #set it to true
+  preprocess: true
+  line_number: true #optional
+  tab_replace: ''
 
 # Category & Tag
 default_category: uncategorized
@@ -64,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: next
+theme: oasis
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
@@ -78,8 +86,7 @@ deploy:
 duoshuo_shortname: gobraves
 
 # Social links
-social:
-  github: https://github.com/gobraves
+github: https://github.com/gobraves
 
 # hexo-renderer-marked
 marked:
