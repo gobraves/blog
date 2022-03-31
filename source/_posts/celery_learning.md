@@ -29,6 +29,7 @@ categories:
     1. task_queue设置是否正确
     2. 相应的queue是否启动
 2. 在task中使用chain时，无法获得结果，且那个task会显示失败
+
 ### 脱坑
 但在尝试使用chain时，文档注明不能在task中get结果，意味着使用chain的部分不能是一个task，因此完全可以将其写在一个service中，然后通过api去访问
 
