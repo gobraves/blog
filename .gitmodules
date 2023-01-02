@@ -4,3 +4,6 @@
 [submodule "themes/oasis"]
 	path = themes/oasis
 	url = https://github.com/gobraves/hexo-theme-oasis
+[submodule "themes/stellar"]
+	path = themes/stellar
+	url = https://github.com/xaoxuu/hexo-theme-stellar.git

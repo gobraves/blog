@@ -7,7 +7,7 @@ date: 2020-04-06 15:55:55
 
 先看一段代码，这段代码来自《流畅的python》
 
-```pythoh
+```python
 class Quantity:
 
     def __init__(self, storage_name):
@@ -40,7 +40,8 @@ class LineItem:
 如果用`setattr(instance, self.storage_name, value)`替换 `instance.__dict__[self.storage_name] = value`会出现什么结果呢？答案是无限循环。那为什么呢？
 
 根据[描述器协议](https://docs.python.org/zh-cn/3/howto/descriptor.html)
-```
+
+```python
 descr.__get__(self, obj, type=None) -> value
 
 descr.__set__(self, obj, value) -> None
