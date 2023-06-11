@@ -266,4 +266,4 @@ struct Core {
 - `worker`
 - `launch`
 
-![tokio compenent structure](../images/tokio_component_structure.png)
+![tokio compenent structure](/images/tokio_component_structure.png)
