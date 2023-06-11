@@ -1,3 +1,9 @@
+---
+type: post
+title: tokio internal(1)
+date: 2023-06-12
+categories: Rust
+---
 ## tokio runtime 基本组件
 ```rust
   // tokio/src/runtime/runtime.rs
