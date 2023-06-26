@@ -1,5 +1,5 @@
 baseURL: "https://blog.gobraves.site/"
-title: Alpha1023
+title: gobraves
 paginate: 5
 theme: PaperMod
 
@@ -16,7 +16,7 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Alpha1023
+  title: gobraves
   description: "ExampleSite description"
   keywords: [Blog, Portfolio, PaperMod]
   author: Me

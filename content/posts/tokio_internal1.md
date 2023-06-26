@@ -1,8 +1,53 @@
 ---
-title: tokio internal(1)
+title: tokio源码阅读1
 date: 2023-06-12
 ---
 ## tokio runtime 基本组件
+这个系列文章会以这段代码为样例，了解tokio内部运行机制
+```rust
+use std::error::Error;
+use tokio::io::{AsyncReadExt, AsyncWriteExt};
+use tokio::net::TcpListener;
+use tokio;
+
+fn main() -> Result<(), Box<dyn Error>> {
+    let rt = tokio::runtime::Runtime::new().unwrap();
+    rt.block_on(async {
+        //tokio::time::sleep(tokio::time::Duration::from_secs(5)).await;
+        let listener = tokio::net::TcpListener::bind("127.0.0.1:8080").await.unwrap();
+
+        loop {
+            let (mut socket, _) = listener.accept().await.unwrap();
+
+            tokio::spawn(async move {
+                let mut buf = vec![0; 1024];
+
+                // In a loop, read data from the socket and write the data back.
+                loop {
+                    let n = socket
+                        .read(&mut buf)
+                        .await
+                        .expect("failed to read data from socket");
+
+                    if n == 0 {
+                        return;
+                    }
+
+                    socket
+                        .write_all(&buf[0..n])
+                        .await
+                        .expect("failed to write data to socket");
+                    println!("buf: {:?}", buf);
+                }
+            });
+        }
+    });
+    Ok(())
+}
+
+```
+
+先看`runtime`创建部分
 ```rust
 // tokio/src/runtime/runtime.rs
 #[cfg(feature = "rt-multi-thread")]
