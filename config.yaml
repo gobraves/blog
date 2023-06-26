@@ -52,14 +52,14 @@ params:
     safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "Alpha1023"
+    text: "gobraves"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: Alpha1023
+    title: "gobraves"
     subtitle: "This is subtitle"
     imageUrl: "<img location>"
     imageWidth: 120
