@@ -1,0 +1,44 @@
+baseURL= "https://blog.gobraves.site/"
+title= "gobraves"
+paginate= 20
+theme= "hugo-coder"
+
+enableEmoji = true
+enableRobotsTXT= true
+buildDrafts= false
+buildFuture= false
+buildExpired= false
+
+[markup.highlight]
+style = "onedark"
+linenos = true
+
+[params]
+  description = "Gobraves's website"
+  keywords = "blog, developer, personal"
+  author = "Gobraves"
+  avatarurl = "images/avatar.jpg"
+
+  dateFormat = "January 2, 2006"
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+  # katex = true
+  math = true
+
+[[params.social]]
+  name = "github"
+  url = "https://github.com/gobraves"
+  icon = "fa fa-github fa-2x"
+[[menu.main]]
+  name = "Posts"
+  weight = 1
+  url = "posts/"
+# [[menu.main]]
+#   name = "About"
+#   weight = 2
+#   url = "about/"
+[[menu.main]]
+  name = "tags"
+  weight = 3
+  url = "tags/"
+

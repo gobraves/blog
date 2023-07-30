@@ -20,3 +20,4 @@ theme/
 .deploy_git
 db.json
 package-lock.json
+resources
