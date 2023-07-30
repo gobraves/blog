@@ -6,24 +6,24 @@ date: 2023-06-12T14:31:52+08:00
 ## main thread execution
 
 ```rust
-  #[track_caller]
-      pub fn block_on<F: Future>(&self, future: F) -> F::Output {
-          #[cfg(all(tokio_unstable, feature = "tracing"))]
-          let future = crate::util::trace::task(
-              future,
-              "block_on",
-              None,
-              crate::runtime::task::Id::next().as_u64(),
-          );
-  
-          let _enter = self.enter();
-  
-          match &self.scheduler {
-              Scheduler::CurrentThread(exec) => exec.block_on(&self.handle.inner, future),
-              #[cfg(all(feature = "rt-multi-thread", not(tokio_wasi)))]
-              Scheduler::MultiThread(exec) => exec.block_on(&self.handle.inner, future),
-          }
-      }
+#[track_caller]
+pub fn block_on<F: Future>(&self, future: F) -> F::Output {
+    #[cfg(all(tokio_unstable, feature = "tracing"))]
+    let future = crate::util::trace::task(
+        future,
+        "block_on",
+        None,
+        crate::runtime::task::Id::next().as_u64(),
+    );
+
+    let _enter = self.enter();
+
+    match &self.scheduler {
+        Scheduler::CurrentThread(exec) => exec.block_on(&self.handle.inner, future),
+        #[cfg(all(feature = "rt-multi-thread", not(tokio_wasi)))]
+        Scheduler::MultiThread(exec) => exec.block_on(&self.handle.inner, future),
+    }
+}
 ```
 执行`multithread::block_on`
 ```rust
@@ -45,14 +45,14 @@ where
 然后执行`BlockingRegionGuard`的`block_on`
 ```rust
 pub(crate) fn block_on<F>(&mut self, f: F) -> Result<F::Output, AccessError>
-    where
-        F: std::future::Future,
-    {
-        use crate::runtime::park::CachedParkThread;
+where
+    F: std::future::Future,
+{
+    use crate::runtime::park::CachedParkThread;
 
-        let mut park = CachedParkThread::new();
-        park.block_on(f)
-    }
+    let mut park = CachedParkThread::new();
+    park.block_on(f)
+}
 ```
 `CachedParkThread`的`block_on`
 ```rust
@@ -65,34 +65,34 @@ pub(crate) struct CachedParkThread {
 ```rust
 // tokio-1.28.2/src/runtime/park.rs
 pub(crate) fn block_on<F: Future>(&mut self, f: F) -> Result<F::Output, AccessError> {
-	use std::task::Context;
+    use std::task::Context;
     use std::task::Poll::Ready;
 
-	// `get_unpark()` should not return a Result
-	let waker = self.waker()?;
-	let mut cx = Context::from_waker(&waker);
-
-	pin!(f);
-
-	loop {
-		if let Ready(v) = crate::runtime::coop::budget(|| f.as_mut().poll(&mut cx)) {
-		  return Ok(v);
-		}
-
-		// Wake any yielded tasks before parking in order to avoid
-		// blocking.
-		#[cfg(feature = "rt")]
-		crate::runtime::context::with_defer(|defer| defer.wake());
-
-		self.park();
-	}
+    // `get_unpark()` should not return a Result
+    let waker = self.waker()?;
+    let mut cx = Context::from_waker(&waker);
+    
+    pin!(f);
+    
+    loop {
+    	if let Ready(v) = crate::runtime::coop::budget(|| f.as_mut().poll(&mut cx)) {
+    	  return Ok(v);
+    	}
+    
+    	// Wake any yielded tasks before parking in order to avoid
+    	// blocking.
+    	#[cfg(feature = "rt")]
+    	crate::runtime::context::with_defer(|defer| defer.wake());
+    
+    	self.park();
+    }
 }
 ```
 这里调用了`self.waker()?` ，创建了`CURRENT_PARKER` -> `UnparkThread` -> `waker` -> `context`
 ```rust
 // tokio-1.28.2/src/runtime/park.rs
 fn unpark(&self) -> Result<UnparkThread, AccessError> {
-        self.with_current(|park_thread| park_thread.unpark())
+    self.with_current(|park_thread| park_thread.unpark())
 }
 
 pub(crate) fn park(&mut self) {
