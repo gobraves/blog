@@ -7,7 +7,6 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-enableInlineShortcodes: true
 
 googleAnalytics: UA-123-45
 
@@ -137,3 +136,30 @@ markup:
     noHl: false
     style: onedark
     tabWidth: 4
+
+
+
+security:
+  enableInlineShortcodes: false
+  exec:
+    allow:
+    - ^(dart-)?sass(-embedded)?$
+    - ^go$
+    - ^npx$
+    - ^postcss$
+    - ^pandoc$
+    osEnv:
+    - (?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG)$
+  funcs:
+    getenv:
+    - ^HUGO_
+    - ^CI$
+  goTemplates:
+    AllowActionJSTmpl: false
+  http:
+    mediaTypes: null
+    methods:
+    - (?i)GET|POST
+    urls:
+    - .*
+
