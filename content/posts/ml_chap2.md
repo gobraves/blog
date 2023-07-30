@@ -26,17 +26,17 @@ tags: ["Note"]
   - 银行的标准即为阈值（threshold）
   - 不同维度的特征应该有不一样的权重$\mathcal w$
 
-那么 \begin{equation} \mathcal H: h(x) = sign((\sum_{i=1} ^n w_i x_i) - threshold) \end{equation}
+那么 $$ \mathcal H: h(x) = sign((\sum_{i=1} ^n w_i x_i) - threshold) $$
 
 这个式子可以做一个数学上的简化：
-\begin{equation}
+$$
 \begin{aligned}
 h(x) &= sign((\sum_{i=1} ^n w_i x_i) - threshold)\\
 &= sign((\sum_{i=1} ^n w_i x_i) +(- threshold) \cdot (+1))\\
 &= sign(\sum_{i=0} ^n w_i x_i)\\
 &= sign(\mathbf w^\mathrm{T} \mathbf x)
 \end{aligned}
-\end{equation}
+$$
 
 这里将$ -threshold$ 当作$w_0, 1当作x_0$, 从而将式子整理为两个向量内积的形式
 
@@ -87,16 +87,16 @@ h(x) &= sign((\sum_{i=1} ^n w_i x_i) - threshold)\\
 > 如果PLA能够停下来，那么所有的点肯定被分成了两部分，即数据被分成了两部分。那么这部分数据就是线性可分（linear separatablility的。反过来，由数据是线性可分一定能推出PLA可以停下来吗？
 
 数据是线性可分，代表存在一条线，可以将数据分成两部分（如下图所示），不妨将这条线表示为$w_f$，既然将数据分成了两部分肯定有
-\begin{equation}
+$$
 \min_{n}y_{n}w_{f}^\mathrm{T}x_{n} > 0
-\end{equation}
+$$
 $y_{n}w_{f}^\mathrm{T}x_{n}$表示的是点到直线的距离。也肯定有
-\begin{equation}
+$$
 y_{n(t)} \mathbf{w}_{f}^\mathrm{T} \mathbf{x_{n(t)}} > \min_{n}y_{n}w_{f}^\mathrm{T}x_{n} > 0
-\end{equation}
+$$
 
 每次更新的过程：
-\begin{equation}
+$$
 \begin{aligned}
 \mathbf{w}_{f}^\mathrm{T}\mathbf{w}_{t} &= \mathbf{w}_{f}^\mathrm{T}(\mathbf{w}_{t-1} + y_{n(t-1)}\mathbf{x_{n(t-1)}})\\
     & \ge \mathbf{w}_{f}^\mathrm{T}\mathbf{w}_{t-1} + \min_{n}y_{n}w_{f}^\mathrm{T}x_{n}\\
@@ -105,17 +105,19 @@ y_{n(t)} \mathbf{w}_{f}^\mathrm{T} \mathbf{x_{n(t)}} > \min_{n}y_{n}w_{f}^\mathr
     & \vdots \\
     & \ge \mathbf{w}_{f}^\mathrm{T}\mathbf{w}_{0} + t\min_{n}y_{n}w_{f}^\mathrm{T}x_{n}
 \end{aligned}
-\end{equation}
+$$
+
 $w_{0} = 0$，所以
-\begin{equation}
+
+$$
 \mathbf{w}_{f}^\mathrm{T}\mathbf{w}_{t} \ge  t\min_{n}y_{n}w_{f}^\mathrm{T}x_{n}\\
-\end{equation}
+$$
 
 根据上式，可以看出$w_f$和$w_t$的内积的确越来越大，但是不一定是越来越靠近，可能只是$||w_t||$变大了
 
 同时，当$sign(\mathbf{w}_t^{\mathrm{T}} \mathbf{x}_{n(t)}) \neq y_{n(t)}$时，$w_t$会改变。易得$y_{n(t)} \mathbf{w}_t^\mathrm{T} \mathbf{x}_{n(t)} \le 0 \Leftrightarrow sign(\mathbf{w}_t^{\mathrm{T}} \mathbf{x}_{n(t)}) \neq y_{n(t)}$
 
-\begin{equation}
+$$
 \begin{aligned}
 ||\mathbf{w}_{t}||^2 & = ||\mathbf{w_{t-1}} + y_{n(t-1)}\mathbf{x}_{n(t-1)}||^2\\
                      & = ||\mathbf{w_{t-1}}||^2 + 2y_{n(t-1)} \mathbf{w}_t^{\mathrm{T}} \mathbf{x}_{n(t-1)} + ||y_{n(t-1)} \mathbf{x}_{n(t-1)}||^2\\
@@ -126,26 +128,26 @@ $w_{0} = 0$，所以
                      & \le ||\mathbf{w_{0}}||^2 + t\max_n||y_{n} \mathbf{x}_{n}||^2\\
                      & \le t\max_n||y_{n} \mathbf{x}_{n}||^2
 \end{aligned}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 \begin{aligned}
 \dfrac{\mathbf{w}_f^{\mathrm{T}}}{||\mathbf{w}_f||} \dfrac{\mathbf{w}_T}{||\mathbf{w}_T||} &\ge \dfrac{t\min \limits_n y_{n}w_{f}^\mathrm{T}x_{n}}{||w_f||\sqrt{t\max \limits_n||y_{n} \mathbf{x}_{n}||^2}}\\
     &\ge \sqrt{t}\dfrac{\min \limits_n y_{n} \dfrac{w_{f}^\mathrm{T}}{||w_f||}x_{n}} {\max \limits_n||y_{n} \mathbf{x}_{n}||}\\
     &= \sqrt{t}\dfrac{\min \limits_n y_{n} \dfrac{w_{f}^\mathrm{T}}{||w_f||}x_{n}} {\max \limits_n|| \mathbf{x}_{n}||}
 \end{aligned}
-\end{equation}
+$$
 
 由此可以看出，$w_f$和$w_T$确实越来越靠近,最终重合，所以
-\begin{equation}
+$$
 \dfrac{\mathbf{w}_f^{\mathrm{T}}}{||\mathbf{w}_f||} \dfrac{\mathbf{w}_T}{||\mathbf{w}_T||} \le 1
-\end{equation}
+$$
     令$\mathrm{R^2} = \max \limits_n ||x_n||^2\quad \rho = \min \limits_n y_n \dfrac{w_f^\mathrm{T}}{||w_f||}\mathrm{x}_n $ 
     
-\begin{equation}
+$$
 \sqrt{t}\dfrac{\min \limits_n y_{n} \dfrac{w_{f}^\mathrm{T}}{||w_f||}x_{n}} {\max \limits_n|| \mathbf{x}_{n}||} \le 1\\
 t \le \dfrac{\mathrm{R^2}}{\rho ^2}
-\end{equation}
+$$
 
 可以看出t是有上界的，所以当数据是线性可分的时候，PLA最终会停
 
@@ -170,9 +172,9 @@ t \le \dfrac{\mathrm{R^2}}{\rho ^2}
 
 既然这样，能否像这样找出g呢？
 
-\begin{equation}
+$$
 \mathbf{w}_g \leftarrow \mathop{\arg\max}_\mathbf{w}\sum_{n=1}^N\parallel y_n \neq sign(\mathbf{w}^\mathrm{T}\mathbf{x}_n) \parallel
-\end{equation}
+$$
 
 这样做是不可能的.NP-hard
 
